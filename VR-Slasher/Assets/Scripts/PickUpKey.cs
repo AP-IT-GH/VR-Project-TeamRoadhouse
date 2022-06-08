@@ -5,6 +5,7 @@ using UnityEngine;
 public class PickUpKey : MonoBehaviour
 {
     public int KeyCount;
+    public AudioClip key;
     private void OnTriggerEnter(Collider other)
     {
         //check if player touches the gameobject with this script
@@ -14,7 +15,7 @@ public class PickUpKey : MonoBehaviour
             if (this.gameObject.tag == "Key")
             {
                 // play sound at point before gameobject is destoryed otherwise you the sound won't play
-                //AudioSource.PlayClipAtPoint(PickUpSound, transform.position);
+                AudioSource.PlayClipAtPoint(key, transform.position);
                 KeyCount++;
                 KeyInventoryManager.instance.AddPoint();
                 Destroy(gameObject);

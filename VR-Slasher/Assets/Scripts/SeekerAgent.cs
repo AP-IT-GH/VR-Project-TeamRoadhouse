@@ -1,3 +1,4 @@
+using System;
 using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
@@ -8,19 +9,17 @@ public class SeekerAgent : Agent
     [SerializeField] private float moveSpeed = 10;
     [SerializeField] private float rotationSpeed = 350;
     [SerializeField] private MonitorTool monitorTool;
-
+    [SerializeField] private float maxTime = 60f;
+    
     private Rigidbody rb;
     private Environment env;
-
-    [SerializeField] private float maxTime = 60f;
     private float timer = 0f;
 
     public override void Initialize()
     {
         rb = GetComponent<Rigidbody>();
         env = GetComponentInParent<Environment>();
-
-        timer = maxTime;
+        timer = maxTime; // Reset timer
     }
 
     private void Update()
@@ -28,7 +27,6 @@ public class SeekerAgent : Agent
         // If agent falls, give negative reward and end episode
         if(transform.localPosition.y < -3f)
         {
-            SetReward(-1f);
             monitorTool.FailsCount += 1;
             EndEpisode();
         }
@@ -36,10 +34,8 @@ public class SeekerAgent : Agent
         // Create timer to give the agent a maximum time to find the player
         if(timer <= 0f)
         {
-            SetReward(-1f);
             monitorTool.FailsCount += 1;
             EndEpisode();
-            timer = maxTime; // Reset timer
         }
         timer -= Time.deltaTime; // Take time elapsed from timer
     }
@@ -51,30 +47,33 @@ public class SeekerAgent : Agent
         rb.angularVelocity = Vector3.zero;
         rb.velocity = Vector3.zero;
 
+        timer = maxTime;
+
         env.ResetEnvironment();
     }
 
     public override void CollectObservations(VectorSensor sensor)
     {
-        sensor.AddObservation(transform.position);
-        sensor.AddObservation(transform.rotation);
+        sensor.AddObservation(transform.position); // 3
+        sensor.AddObservation(transform.rotation); // 4
+        sensor.AddObservation(env.players[0].transform.position); // 3
     }
 
     public override void OnActionReceived(ActionBuffers actions)
     {
         var vectorAction = actions.DiscreteActions;
 
-        // Add negative reward when agent doesn't move
-        if (vectorAction[0] == 0 & vectorAction[1] == 0)
+        // return when agent doesn't move
+        var isMoving = vectorAction[0] != 0 || vectorAction[1] != 0;
+        if (!isMoving)
         {
-            AddReward(-0.01f);
             return;
         }
-
-        // 0 = IDLY , 1 = BACKWARDS , 2 = FORWARDS
-        if (vectorAction[0] != 0)
+        
+        // 0 = IDLY, 1 = FORWARDS
+        if (vectorAction[0] == 1)
         {
-            Vector3 translation = transform.forward * moveSpeed * (vectorAction[0] * 2 - 3) * Time.deltaTime;
+            Vector3 translation = transform.forward * moveSpeed * Time.deltaTime;
             transform.Translate(translation, Space.World);
         }
 
@@ -106,8 +105,6 @@ public class SeekerAgent : Agent
         outputAction[1] = 0;
 
         if (Input.GetKey(KeyCode.UpArrow)) // Moving forwards
-            outputAction[0] = 2;
-        else if (Input.GetKey(KeyCode.DownArrow)) // Moving backwards
             outputAction[0] = 1;
         if (Input.GetKey(KeyCode.LeftArrow)) // Turning left
             outputAction[1] = 1;
