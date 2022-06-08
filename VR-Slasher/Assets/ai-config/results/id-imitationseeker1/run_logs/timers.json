@@ -1,0 +1,89 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1653384632",
+        "python_version": "3.9.7 (default, Sep 16 2021, 16:59:28) [MSC v.1916 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\Users\\Eigenaar\\anaconda3\\Scripts\\mlagents-learn Agent.yaml --run id-imitationseeker1 --resume",
+        "mlagents_version": "0.28.0",
+        "mlagents_envs_version": "0.28.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "1.7.1+cu110",
+        "numpy_version": "1.20.3",
+        "end_time_seconds": "1653384649"
+    },
+    "total": 17.1875781,
+    "count": 1,
+    "self": 0.014660199999998014,
+    "children": {
+        "run_training.setup": {
+            "total": 0.2811235000000003,
+            "count": 1,
+            "self": 0.2811235000000003
+        },
+        "TrainerController.start_learning": {
+            "total": 16.891794400000002,
+            "count": 1,
+            "self": 7.510000000365835e-05,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 16.8897196,
+                    "count": 1,
+                    "self": 8.3081692,
+                    "children": {
+                        "demo_to_buffer": {
+                            "total": 8.5815504,
+                            "count": 1,
+                            "self": 0.00013629999999764664,
+                            "children": {
+                                "load_demonstration": {
+                                    "total": 0.18409620000000082,
+                                    "count": 1,
+                                    "self": 0.18172210000000177,
+                                    "children": {
+                                        "read_file": {
+                                            "total": 0.0023740999999990464,
+                                            "count": 1,
+                                            "self": 0.0023740999999990464
+                                        }
+                                    }
+                                },
+                                "make_demo_buffer": {
+                                    "total": 8.397317900000001,
+                                    "count": 1,
+                                    "self": 1.2230905000003265,
+                                    "children": {
+                                        "steps_from_proto": {
+                                            "total": 7.174227399999674,
+                                            "count": 30572,
+                                            "self": 4.423758799999288,
+                                            "children": {
+                                                "_process_rank_one_or_two_observation": {
+                                                    "total": 2.750468600000387,
+                                                    "count": 122288,
+                                                    "self": 2.750468600000387
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "TrainerController._save_models": {
+                    "total": 0.0019996999999989384,
+                    "count": 1,
+                    "self": 0.00030819999999920356,
+                    "children": {
+                        "RLTrainer._checkpoint": {
+                            "total": 0.0016914999999997349,
+                            "count": 1,
+                            "self": 0.0016914999999997349
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

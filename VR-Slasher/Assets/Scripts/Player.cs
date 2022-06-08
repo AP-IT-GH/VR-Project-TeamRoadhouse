@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Collidable"))
         {
-            print("Player in wall");
+            //print("Player in wall");
         }
     }
 }

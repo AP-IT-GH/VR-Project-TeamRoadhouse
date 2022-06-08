@@ -1,0 +1,47 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1654442731",
+        "python_version": "3.9.7 (default, Sep 16 2021, 16:59:28) [MSC v.1916 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\Users\\Eigenaar\\anaconda3\\Scripts\\mlagents-learn Agent.yaml --run-id=Seeker180RaysV2",
+        "mlagents_version": "0.28.0",
+        "mlagents_envs_version": "0.28.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "1.7.1+cu110",
+        "numpy_version": "1.20.3",
+        "end_time_seconds": "1654442758"
+    },
+    "total": 27.4809342,
+    "count": 1,
+    "self": 0.025697300000000922,
+    "children": {
+        "run_training.setup": {
+            "total": 0.2682275999999999,
+            "count": 1,
+            "self": 0.2682275999999999
+        },
+        "TrainerController.start_learning": {
+            "total": 27.1870093,
+            "count": 1,
+            "self": 0.0005183999999971434,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 27.1864625,
+                    "count": 1,
+                    "self": 27.1864625
+                },
+                "trainer_threads": {
+                    "total": 1.1000000021965661e-06,
+                    "count": 1,
+                    "self": 1.1000000021965661e-06
+                },
+                "TrainerController._save_models": {
+                    "total": 2.729999999928623e-05,
+                    "count": 1,
+                    "self": 2.729999999928623e-05
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,56 @@
+{
+    "SeekerAgent": {
+        "checkpoints": [
+            {
+                "steps": 65039,
+                "file_path": "results\\SeekerV3\\SeekerAgent\\SeekerAgent-65039.onnx",
+                "reward": null,
+                "creation_time": 1653944186.2533386,
+                "auxillary_file_paths": [
+                    "results\\SeekerV3\\SeekerAgent\\SeekerAgent-65039.pt"
+                ]
+            },
+            {
+                "steps": 71541,
+                "file_path": "results\\SeekerV3\\SeekerAgent\\SeekerAgent-71541.onnx",
+                "reward": null,
+                "creation_time": 1653944363.6458972,
+                "auxillary_file_paths": [
+                    "results\\SeekerV3\\SeekerAgent\\SeekerAgent-71541.pt"
+                ]
+            },
+            {
+                "steps": 0,
+                "file_path": "results\\SeekerV3\\SeekerAgent\\SeekerAgent-0.onnx",
+                "reward": null,
+                "creation_time": 1653951926.677469,
+                "auxillary_file_paths": [
+                    "results\\SeekerV3\\SeekerAgent\\SeekerAgent-0.pt"
+                ]
+            },
+            {
+                "steps": 7657,
+                "file_path": "results\\SeekerV3\\SeekerAgent\\SeekerAgent-7657.onnx",
+                "reward": null,
+                "creation_time": 1653952178.8859138,
+                "auxillary_file_paths": [
+                    "results\\SeekerV3\\SeekerAgent\\SeekerAgent-7657.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 7657,
+            "file_path": "results\\SeekerV3\\SeekerAgent.onnx",
+            "reward": null,
+            "creation_time": 1653952178.8859138,
+            "auxillary_file_paths": [
+                "results\\SeekerV3\\SeekerAgent\\SeekerAgent-7657.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

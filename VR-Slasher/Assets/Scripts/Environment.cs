@@ -10,16 +10,25 @@ public class Environment : MonoBehaviour
 
     [SerializeField] private int targets;
 
-    private List<GameObject> players = new List<GameObject>();
+    public List<GameObject> players = new List<GameObject>();
 
     public void ResetEnvironment()
     {
+        print("Resetting environment");
+
         // Remove all players still in the field
         foreach(var player in players)
         {
             Destroy(player.gameObject);
         }
         players.Clear();
+        
+        // Reset agent position
+        do
+        {
+            agent.transform.localPosition = RandomPosition(0.5f);
+            agent.transform.localEulerAngles = RandomRotation();
+        } while (Physics.CheckSphere(agent.transform.localPosition, .1f));
 
         // Reset player (Agent's target) position
         for (int i = 0; i < targets; i++)
@@ -29,7 +38,7 @@ public class Environment : MonoBehaviour
             players.Add(player);
             do
             {
-                player.transform.localPosition = RandomPosition(0.5f);
+                player.transform.position = RandomPosition(this.transform.position.y + 0.5f);
             } while (Physics.CheckSphere(player.transform.localPosition, .1f));
         }
 
@@ -43,11 +52,8 @@ public class Environment : MonoBehaviour
 
     public Vector3 RandomPosition(float y)
     {
-        var maxX = (ground.transform.localScale.x / 2) - 0.75f;
-        var maxY = (ground.transform.localScale.y / 2) - 0.75f;
-
-        float x = Random.Range(-maxX, maxX);
-        float z = Random.Range(-maxY, maxY);
+        float x = Random.Range(-14.25f, 14.25f);
+        float z = Random.Range(-14.25f, 14.25f);
 
         return new Vector3(x, y, z);
     }
