@@ -4,8 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Can
   - Ground
+  - Agent
+  - Collidable
+  - Can
   - Ball
   layers:
   - Default
@@ -16,6 +18,8 @@ TagManager:
   - UI
   - Object
   - Map
+  - Wall
+  - 
   - 
   - 
   - 

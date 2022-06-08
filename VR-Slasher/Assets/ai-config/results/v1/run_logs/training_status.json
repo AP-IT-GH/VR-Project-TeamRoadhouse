@@ -1,0 +1,65 @@
+{
+    "SeekerAgent": {
+        "checkpoints": [
+            {
+                "steps": 142040,
+                "file_path": "results\\v1\\SeekerAgent\\SeekerAgent-142040.onnx",
+                "reward": null,
+                "creation_time": 1652009034.379458,
+                "auxillary_file_paths": [
+                    "results\\v1\\SeekerAgent\\SeekerAgent-142040.pt"
+                ]
+            },
+            {
+                "steps": 144308,
+                "file_path": "results\\v1\\SeekerAgent\\SeekerAgent-144308.onnx",
+                "reward": null,
+                "creation_time": 1652009665.7275488,
+                "auxillary_file_paths": [
+                    "results\\v1\\SeekerAgent\\SeekerAgent-144308.pt"
+                ]
+            },
+            {
+                "steps": 150364,
+                "file_path": "results\\v1\\SeekerAgent\\SeekerAgent-150364.onnx",
+                "reward": null,
+                "creation_time": 1652009810.4689481,
+                "auxillary_file_paths": [
+                    "results\\v1\\SeekerAgent\\SeekerAgent-150364.pt"
+                ]
+            },
+            {
+                "steps": 499998,
+                "file_path": "results\\v1\\SeekerAgent\\SeekerAgent-499998.onnx",
+                "reward": 0.0,
+                "creation_time": 1652016944.5496142,
+                "auxillary_file_paths": [
+                    "results\\v1\\SeekerAgent\\SeekerAgent-499998.pt"
+                ]
+            },
+            {
+                "steps": 500002,
+                "file_path": "results\\v1\\SeekerAgent\\SeekerAgent-500002.onnx",
+                "reward": 0.8333333333333334,
+                "creation_time": 1652016944.652124,
+                "auxillary_file_paths": [
+                    "results\\v1\\SeekerAgent\\SeekerAgent-500002.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 500002,
+            "file_path": "results\\v1\\SeekerAgent.onnx",
+            "reward": 0.8333333333333334,
+            "creation_time": 1652016944.652124,
+            "auxillary_file_paths": [
+                "results\\v1\\SeekerAgent\\SeekerAgent-500002.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}
