@@ -9,6 +9,8 @@ TagManager:
   - Collidable
   - Can
   - Ball
+  - Key
+  - Portal
   layers:
   - Default
   - TransparentFX
@@ -19,8 +21,6 @@ TagManager:
   - Object
   - Map
   - Wall
-  - 
-  - 
   - 
   - 
   - 

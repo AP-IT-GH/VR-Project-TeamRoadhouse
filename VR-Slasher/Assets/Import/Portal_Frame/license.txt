@@ -1,0 +1,11 @@
+Model Information:
+* title:	Portal Frame
+* source:	https://sketchfab.com/3d-models/portal-frame-da34b37a224e4e49b307c0b17a50af2c
+* author:	soidev (https://sketchfab.com/soidev)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Portal Frame" (https://sketchfab.com/3d-models/portal-frame-da34b37a224e4e49b307c0b17a50af2c) by soidev (https://sketchfab.com/soidev) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
