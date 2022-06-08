@@ -41,8 +41,8 @@ public class Environment : MonoBehaviour
 
     public Vector3 RandomPosition(float y)
     {
-        float x = Random.Range(-7.25f, 7.25f);
-        float z = Random.Range(-7.25f, 7.25f);
+        float x = Random.Range(-14.25f, 14.25f);
+        float z = Random.Range(-14.25f, 14.25f);
 
         return new Vector3(x, y, z);
     }
