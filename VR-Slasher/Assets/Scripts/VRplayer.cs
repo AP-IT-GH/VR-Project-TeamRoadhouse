@@ -13,5 +13,9 @@ public class VRplayer : MonoBehaviour
         {
             Nextlevel.Load();
         }
+        if (other.gameObject.CompareTag("Agent"))
+        {
+            Nextlevel.Restart();
+        }
     }
 }

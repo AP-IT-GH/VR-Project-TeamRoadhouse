@@ -8,6 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/map_final.unity
     guid: 9413aed8468bd0e448f1325ce5439bcc
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: bf45fa99ae243974e9bdb7bd7eab2081
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: d3134b6f939114be9b8d6dbeff42d453, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 2b485d7676a7d4b3eba3a764bd60d013, type: 2}
