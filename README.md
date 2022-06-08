@@ -89,14 +89,10 @@ Vervolgens maken we een nieuwe script aan voor onze Agent, deze laten we overerv
     [SerializeField] private float rotationSpeed = 350;
     [SerializeField] private MonitorTool monitorTool;
     [SerializeField] private float maxTime = 60f;
-    [SerializeField] private float maxTimeNotMoved = 3f;
-    private bool Collided = false;
-    private bool notMoved = false;
     
     private Rigidbody rb;
     private Environment env;
     private float timer = 0f;
-    private float movedTimer = 0f;
 
     public override void Initialize(){}
 
@@ -109,8 +105,6 @@ Vervolgens maken we een nieuwe script aan voor onze Agent, deze laten we overerv
     public override void OnActionReceived(ActionBuffers actions){}
 
     void OnCollisionEnter(Collision collision){}
- 
-    private void OnCollisionExit(Collision other){}
 
     public override void Heuristic(in ActionBuffers actionBuffers){}
 ```
@@ -120,8 +114,7 @@ in de Initialize functie initalizeren we de volgende velden :
     {
         rb = GetComponent<Rigidbody>();
         env = GetComponentInParent<Environment>();
-        timer = maxTime;
-        movedTimer = maxTimeNotMoved;
+        timer = maxTime; // Reset timer
     }
 
 ```
@@ -133,7 +126,7 @@ Update Methode
         // If agent falls, give negative reward and end episode
         if(transform.position.y < transform.parent.position.y - 3)
         {
-            SetReward(-1f);
+            // in de monitorTool (canvas) count fails:
             monitorTool.FailsCount += 1;
             EndEpisode();
         }
@@ -141,43 +134,25 @@ Update Methode
         // Create timer to give the agent a maximum time to find the player
         if(timer <= 0f)
         {
-            SetReward(-1f);
+            // in de monitorTool (canvas) count fails:
             monitorTool.FailsCount += 1;
             EndEpisode();
-            timer = maxTime; // Reset timer
         }
         timer -= Time.deltaTime; // Take time elapsed from timer
-
-        // if the player hits hits
-        if (Collided)
-        {
-            print("hitting wall");
-            SetReward(-0.5f);
-        }
-
-        if (notMoved)
-        {
-            movedTimer -= Time.deltaTime;
-            if (movedTimer <= 0)
-            {
-                print("not moved int 3 sec");
-                SetReward(-0.3f);
-            }
-        }
-        else
-            movedTimer = maxTimeNotMoved;
-        
     }
 ```
 OnEpisodeBegin metode :
 ```csharp
     public override void OnEpisodeBegin()
     {
-        // in de monitorTool (canvas) counts episodes:
+        // in de monitorTool (canvas) count episodes:
         monitorTool.EpisodesCount += 1;
 
         rb.angularVelocity = Vector3.zero;
         rb.velocity = Vector3.zero;
+        
+        // resets the timer
+        timer = maxTime;
 
         // resets enviroment with new positions for player and seeker
         env.ResetEnvironment();
@@ -187,11 +162,11 @@ CollectObservations methode :
 ```csharp
   public override void CollectObservations(VectorSensor sensor)
     {
-        //position of Agent takes 3 observations (forward,backward, idle)
+        // position of Agent takes 3 observations (x, y, z)
         sensor.AddObservation(transform.position); 
-         //rotation of Agent takes 4 observations 
+        // rotation of Agent takes 4 observations (x, y, z, w)
         sensor.AddObservation(transform.rotation);
-        //position  of target takes 3 observations 
+        // position of target takes 3 observations (x, y, z)
         sensor.AddObservation(env.players[0].transform.position);  
     }
 ```
@@ -236,20 +211,9 @@ OnCollisionEnter Methode :
             monitorTool.SuccesCount += 1;
             EndEpisode();
         }
-        if (collision.gameObject.CompareTag("Collidable"))
-        {
-            Collided = true;
-        }
     }
+```
 
-```
-OnCollisionExit methode :
-```csharp
-   private void OnCollisionExit(Collision other)
-    {
-        Collided = false;
-    }
-```
 Heuristic metode : deze methode is voor het testen/het doen van imitation learning
 ```csharp 
  public override void Heuristic(in ActionBuffers actionBuffers)
@@ -261,8 +225,6 @@ Heuristic metode : deze methode is voor het testen/het doen van imitation learni
         outputAction[1] = 0;
 
         if (Input.GetKey(KeyCode.UpArrow)) // Moving forwards
-            outputAction[0] = 2;
-        else if (Input.GetKey(KeyCode.DownArrow)) // Moving backwards
             outputAction[0] = 1;
         if (Input.GetKey(KeyCode.LeftArrow)) // Turning left
             outputAction[1] = 1;
@@ -313,18 +275,7 @@ public class MonitorTool : MonoBehaviour
     }
 }
 ```
-Player script
-```csharp
-public class Player : MonoBehaviour
-{
-    private Environment environment;
 
-    private void Start()
-    {
-        environment = GetComponentInParent<Environment>();
-    }  
-}
-```
 Enviroment script wordt gebruikt om de trainingArea telkens ramdom te creeren 
 ```csharp
 public class Environment : MonoBehaviour
@@ -395,7 +346,7 @@ daarna plaatsen we het monitor tool script op deze canvas.
 
 als je al deze stappen hebt gevolgd dan is de unity setup compleet.
 Nu zullen we da .yaml file configureren voor onze agent.
-eerst maak je een config file in de assets folder
+eerst maak je een config folder aan in de assets folder
 <br><br>
 ![image](https://user-images.githubusercontent.com/61287853/172689999-48eb27c2-cce3-4228-a4ae-a848d88b424c.png)
 <br><br>
@@ -406,8 +357,8 @@ behaviors:
   SeekerAgent:
     trainer_type: ppo
     hyperparameters:
-      batch_size: 10
-      buffer_size: 100
+      batch_size: 256 
+      buffer_size: 1000000
       learning_rate: 3.0e-4
       beta: 5.0e-4
       epsilon: 0.2
@@ -425,25 +376,34 @@ behaviors:
         gamma: 0.99
         strength: 1.0
       curiosity:
-        strength: 0.1
+        strength: 0.3
         gamma: 0.99
         encoding_size: 256
         learning_rate : 1e-3
-      # gail:
-      #   strength: 0.5
-      #   demo_path: ImitationModels/SeekerAgentImati.demo
-    # behavioral_cloning:
-    #   strength: 0.5
-    #   demo_path: D:\Unity projects\VR-Experience\VR-Slasher\ImitationModels\SeekerAgentImati.demo
+      gail:
+        strength: 0.7
+        demo_path: D:\Unity projects\VR-Experience\VR-Slasher\ImitationModels\FinalDemo.demo ## Dit moet veranderd worden naar de path van je demo
     max_steps: 2000000
     time_horizon: 64
     summary_freq: 2000
-   ```
-   Als je al deze stappen hebt overlopen ben je klaar om je Agent te gaan trainen.
-   doormiddel van anaconda open het project in de config map en run dit command
+```
+De agent gebruikt imitationLearning, we moeten dus ook een playerDemo opnemen waarvan de agent kan leren.
+
+Gebruik hiervoor de DemonstrationRecorder component op je agent.
+
+Als je al deze stappen hebt overlopen ben je klaar om je Agent te gaan trainen.
+doormiddel van anaconda open het project in de config map en run dit command.
+
 ```
 mlagents-learn Agent.yaml --run-id=AgentV1
 ```
-   
+*Zorg dat je deze command in de config folder runt (dezelfde folder, waar je Agent.yaml zich bevindt)*
 
+# Sneller trainen
+Trainen via de unity editor verliep heel traag bij mij, indien dit ook het geval is, of indien je gewoonweg de agent wat sneller wilt trainen kan dit op volgende manier:
 
+Maak een build van je unity project, zorg dat je de ai-training scene kiest als scene die gebuild moet worden.
+Daarna kan je met volgende command de ai laten trainen, zonder dat het visueel gerendered moet worden, dit gaat een pak sneller.
+```
+mlagents-learn Assets/ai-config/Agent.yaml --env=ai-build --run-id=FinalInTrainingArea --force --no-graphics
+```
