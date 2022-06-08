@@ -6,6 +6,8 @@ public class Environment : MonoBehaviour
     [SerializeField] private GameObject playerPrefab;
     [SerializeField] private Transform agent;
 
+    [SerializeField] private GameObject ground;
+
     [SerializeField] private int targets;
 
     public List<GameObject> players = new List<GameObject>();
@@ -20,7 +22,7 @@ public class Environment : MonoBehaviour
             Destroy(player.gameObject);
         }
         players.Clear();
-
+        
         // Reset agent position
         do
         {
@@ -39,6 +41,13 @@ public class Environment : MonoBehaviour
                 player.transform.position = RandomPosition(this.transform.position.y + 0.5f);
             } while (Physics.CheckSphere(player.transform.localPosition, .1f));
         }
+
+        // Reset agent position
+        do
+        {
+            agent.transform.localPosition = RandomPosition(0.5f);
+            agent.transform.localEulerAngles = RandomRotation();
+        } while (Physics.CheckSphere(agent.transform.localPosition, .1f));
     }
 
     public Vector3 RandomPosition(float y)

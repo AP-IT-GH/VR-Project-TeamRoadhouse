@@ -7,16 +7,20 @@ TagManager:
   - Ground
   - Agent
   - Collidable
+  - Can
+  - Ball
+  - Key
+  - Portal
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
+  - Object
+  - Map
   - Wall
-  - 
-  - 
   - 
   - 
   - 
