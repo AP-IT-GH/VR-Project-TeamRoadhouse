@@ -37,6 +37,14 @@ public class NextLevel : MonoBehaviour
 
     }
 
+    void OnTriggerEnter(Collider Other)
+    {
+        if (Other.gameObject)
+        {
+
+        }
+    }
+
     
    
 }

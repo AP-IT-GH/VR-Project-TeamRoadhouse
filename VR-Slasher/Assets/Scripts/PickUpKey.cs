@@ -5,7 +5,7 @@ using UnityEngine;
 public class PickUpKey : MonoBehaviour
 {
     // soundClip that has to play
-    public AudioClip PickUpSound;
+    // public AudioClip PickUpSound;
     public int KeyCount;
     
 
