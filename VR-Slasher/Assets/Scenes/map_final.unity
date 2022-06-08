@@ -854,7 +854,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amountOfCans: 9
-  winCanvas: {fileID: 0}
+  winCanvas: {fileID: 405410322}
   ballGameWon: 0
   gamesWon: 0
 --- !u!1001 &213635096
@@ -5869,7 +5869,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_TargetDisplay: 0
 --- !u!1001 &1350947307
 PrefabInstance:
