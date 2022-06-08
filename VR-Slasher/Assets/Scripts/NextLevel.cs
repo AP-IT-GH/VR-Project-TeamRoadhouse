@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,16 +15,17 @@ public class NextLevel : MonoBehaviour
     // current player score
     private int keyScore;
     private int gameScore;
+
+    void Start()
+    {
+        Portal.SetActive(false);
+    }
+
     void Update()
     {
             keyScore = KeyInventoryManager.instance.Score;
             gameScore = BallGameManager.instance.gamesWon;
-            print(keyScore);
-            if (keyScore < 5 && gameScore < 1)
-            {
-                Portal.SetActive(false);
-            }
-            else
+            if (keyScore == 5 && gameScore == 1)
             {
                 Portal.SetActive(true);
             }

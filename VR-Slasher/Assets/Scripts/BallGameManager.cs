@@ -9,7 +9,6 @@ public class BallGameManager : MonoBehaviour
     public static BallGameManager instance;
     
     public int amountOfCans = 9;
-    public Text gamesWonText;
     public GameObject winCanvas;
     public bool ballGameWon;
     public int gamesWon;
