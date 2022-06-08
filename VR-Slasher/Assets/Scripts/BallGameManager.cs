@@ -4,20 +4,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour
+public class BallGameManager : MonoBehaviour
 {
-    public static GameManager instance;
+    public static BallGameManager instance;
+    
     public int amountOfCans = 9;
     public Text gamesWonText;
-
+    public GameObject winCanvas;
     public bool ballGameWon;
     public int gamesWon;
     private int currentScore;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {
         gamesWon = 0;
         currentScore = 0;
+        winCanvas.SetActive(false);
     }
 
     void Update()
@@ -29,7 +36,7 @@ public class GameManager : MonoBehaviour
             {
                 ballGameWon = true;
                 gamesWon++;
-                gamesWonText.text = "Games won: " + gamesWon;
+                winCanvas.SetActive(true);
             }
         }
     }

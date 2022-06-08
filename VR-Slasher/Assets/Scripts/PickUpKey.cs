@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class PickUpKey : MonoBehaviour
 {
-    // soundClip that has to play
-    // public AudioClip PickUpSound;
     public int KeyCount;
-    
-
     private void OnTriggerEnter(Collider other)
     {
         //check if player touches the gameobject with this script

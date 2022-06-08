@@ -12,18 +12,14 @@ public class NextLevel : MonoBehaviour
     public GameObject Portal;
 
     // current player score
-    private int currentScore;
-
-
+    private int keyScore;
+    private int gameScore;
     void Update()
     {
-        // get score from the inventory manger,check score every frame on advancements
-        if (LevelToLoad == "map")
-        {
-            currentScore = KeyInventoryManager.instance.Score;
-            print(currentScore);
-            // if the score is less then 20 show the text not enough, if currScore == 20 make Canvas invisible
-            if (currentScore < 5 && GameManager.instance.gamesWon < 1)
+            keyScore = KeyInventoryManager.instance.Score;
+            gameScore = BallGameManager.instance.gamesWon;
+            print(keyScore);
+            if (keyScore < 5 && gameScore < 1)
             {
                 Portal.SetActive(false);
             }
@@ -31,10 +27,6 @@ public class NextLevel : MonoBehaviour
             {
                 Portal.SetActive(true);
             }
-                
-        }
-        
-
     }
 
     public void Load()
