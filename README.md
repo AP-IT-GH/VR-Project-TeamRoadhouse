@@ -1,14 +1,72 @@
 # Tutorial
-# VR experience
+# VR Setup
+## 1. Packages
+Om te starten met het VR project hebben we een VR starter project gebruikt van Unity dat al enkele configuraties heeft die we nodig zullen hebben.
+
+Als je een VR project van scratch wilt beginnen zul je de volgende packages moeten installeren:
+- XR Plugin Management
+- XR Interaction Toolkit
+- OpenXR Plugin
+- Universal RP
+
+![image](https://user-images.githubusercontent.com/61287853/172693262-69e2fd6d-b66c-4c5d-add3-00391d55d212.png)
+<br><br>
+Ook heb je een XR Rig, XR Interaction Manager en Input Action Manager nodig, deze zullen standaard geconfigureerd zijn met het starter project.
+
+## 2. Build settings
+Ga naar Edit > Project Settings, kies hier de XR Plug-in Management pagina. 
+Selecteer hier oculus van de lijst plug-in providers bij Android. Hiermee kan je je project builden als een app en testen/spelen op je oculus. 
+<br><br>
+![image](https://user-images.githubusercontent.com/61287853/172693465-44a3221e-41f8-40bf-8410-31fa6e012eb4.png)
+<br><br>
+Bij File > Build settings hier moet je ook van platform veranderen naar Android, dit kan wel enkel wanneer je de Android Export module hebt geïnstalleerd bij de installatie van de Unity Editor.
+
+## 3. Movement
+Voor het movement voegen we een Locomotion System toe aan de XR Rig
+<br><br>
+![image](https://user-images.githubusercontent.com/61287853/172693640-f6a9d1b1-87ba-4122-ab41-0bc50a4f96e7.png)
+<br><br>
+
+Voeg een nieuwe Snap Turn Provider component (Action-based) toe aan het Locomotion System en zet de Left hand Snap Turn Action uit, zo kan je enkel je hoofd draaien met de rechter controller. De linker controller gaan we gebruiken om te bewegen. 
+<br><br>
+
+Je kan de Turn Amount en Debounce Time aanpassen naar je eigen wil. De Debounce Time is hoe lang er tussen elke draai zit.
+<br><br>
+![image](https://user-images.githubusercontent.com/61287853/172693797-6621f75a-8521-4b9e-8dfa-a142e868fb5a.png)
+<br><br>
+
+Voor te bewegen gaan we een Continuous Move Provider (Action-based) gebruiken, dit voegen we ook toe aan het Locomotion System. 
+![image](https://user-images.githubusercontent.com/61287853/172694046-e17f3547-9b23-4197-b4e0-428825dedfff.png)
+<br><br>
+Hier zetten we de Right Hand Move Action uit om de linker controller te kunnen gebruiken om je movement te controleren. Je kan de Move Speed aanpassen naar je eigen voorkeur.
+
+<br><br>
+Aan de XR Rig voegen we dan nog een Character Controller component toe, dit heeft een collision box en geeft ons de mogelijkheid te interageren met de speelwereld.
+Om de Character Controller juist te laten werken voeg je ook nog de Character Controller Driver toe waar je de Min. en Max. hoogte van je character kan bepalen.
+<br><br>
+![image](https://user-images.githubusercontent.com/61287853/172694167-91f7109b-af31-4be2-8ef7-1f64293b3fb4.png)
+
+## 4. Grijpbare objecten
+In de hiërarchie kies XR Rig > Camera Offset > LeftHand Controller en kies hier je Model Prefab voor je linkerhand. Doe hetzelfde voor het rechterhand.
+<br><br>
+![image](https://user-images.githubusercontent.com/61287853/172694560-d1376e75-16e7-4498-a568-ececa5bb003c.png)
+<br><br>
+Voor enkele minigames moet je objecten kunnen vastpakken, hiervoor moeten de objecten een XR Grab Interactable hebben. Voeg deze component toe aan het object dat je wilt vastgrijpen.
+<br><br>
+![image](https://user-images.githubusercontent.com/61287853/172694647-dee6909a-f4c3-492f-8b65-ea8281050715.png)
+<br><br>
+Om het object deftig te kunnen gooien zal je enkele aanpassingen moeten doen aan het object.
+Om te voorkomen dat je object door te grond valt zet je de Collision Detection op Continuous Dynamic, kijk zeker ook dat de movement type op Kinematic staat om de physics van het object 
+<br><br>
+![image](https://user-images.githubusercontent.com/61287853/172694752-a51f986c-d45e-4283-a4a7-e9f25994645b.png)
+
 # ML Agent 
 Eerst maken we een nieuw Unity project aan, we kiezen gewoon 3D als starter project.
 Via de package manager installeren we de ML-Agents unity package: 
 <br><br>
 ![image](https://user-images.githubusercontent.com/61287853/172677267-4c2709a3-d05d-4850-a919-e74c920b150b.png)
 
-
-<br>
-<br>
+<br><br>
 
 Nu maken we een simpele scene, we hebben een (Seeker)Agent nodig (rode cubus in ons geval), een Target/player (die later in de code spauwnt wordt), een platform,
 en muren(walls) om ons domein af te bakennen.
