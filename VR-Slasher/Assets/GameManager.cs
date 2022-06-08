@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public int amountOfCans = 9;
     public Text gamesWonText;
 
-    private bool ballGameWon;
+    public bool ballGameWon;
     public int gamesWon;
     private int currentScore;
 

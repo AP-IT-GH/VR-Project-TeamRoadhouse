@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -433,6 +433,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.23, y: 1.39, z: 1}
   m_Center: {x: 0.33, y: 0, z: 0}
+--- !u!114 &111739926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111739920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc6816f576cf9f147a271dc8f97ee9e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
 --- !u!1 &249263782
 GameObject:
   m_ObjectHideFlags: 0
@@ -448,6 +461,7 @@ GameObject:
   - component: {fileID: 249263784}
   - component: {fileID: 249263783}
   - component: {fileID: 249263789}
+  - component: {fileID: 249263790}
   m_Layer: 3
   m_Name: XR Rig
   m_TagString: Player
@@ -562,6 +576,19 @@ CapsuleCollider:
   m_Height: 2.9
   m_Direction: 1
   m_Center: {x: 0, y: 1.08, z: 0}
+--- !u!114 &249263790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249263782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c68db7aad756fb4a844fb1c21ab9643, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Nextlevel: {fileID: 2121162428}
 --- !u!1 &282780868 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2120596579551352952, guid: 61a00b472cf902249999d1ad00bfc8ab, type: 3}
@@ -639,6 +666,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.23, y: 1.39, z: 1}
   m_Center: {x: 0.33, y: 0, z: 0}
+--- !u!114 &282780874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282780868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc6816f576cf9f147a271dc8f97ee9e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
 --- !u!1 &309671675
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,7 +709,7 @@ Transform:
   m_Children:
   - {fileID: 6046202990158650543}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &309671677
 MonoBehaviour:
@@ -999,7 +1039,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &445500430
 GameObject:
@@ -1066,7 +1106,7 @@ Transform:
   - {fileID: 2121162427}
   - {fileID: 1859453458}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &513258080
 PrefabInstance:
@@ -1227,6 +1267,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.23, y: 1.39, z: 1}
   m_Center: {x: 0.33, y: 0, z: 0}
+--- !u!114 &652063029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652063023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc6816f576cf9f147a271dc8f97ee9e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
 --- !u!1001 &662641024
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1473,7 +1526,7 @@ Transform:
   - {fileID: 1170535722}
   - {fileID: 111739921}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &824284541
 PrefabInstance:
@@ -1580,7 +1633,7 @@ Transform:
   - {fileID: 1671523877}
   - {fileID: 249263788}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &884362066
 GameObject:
@@ -2831,6 +2884,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.23, y: 1.39, z: 1}
   m_Center: {x: 0.33, y: 0, z: 0}
+--- !u!114 &1170535727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170535721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc6816f576cf9f147a271dc8f97ee9e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
 --- !u!1 &1192850782 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4506296936136301824, guid: 6a3958ef4d339e147897f72ae299116f, type: 3}
@@ -3818,6 +3884,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.23, y: 1.39, z: 1}
   m_Center: {x: 0.33, y: 0, z: 0}
+--- !u!114 &1660765147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660765141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc6816f576cf9f147a271dc8f97ee9e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
 --- !u!1 &1671523875
 GameObject:
   m_ObjectHideFlags: 0
@@ -4177,6 +4256,7 @@ GameObject:
   - component: {fileID: 1859453456}
   - component: {fileID: 1859453455}
   - component: {fileID: 1859453459}
+  - component: {fileID: 1859453460}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -4280,6 +4360,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 87648063}
+--- !u!114 &1859453460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859453454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06f8a99ecc026864f9afde6dfd73d35c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amountOfCans: 9
+  gamesWonText: {fileID: 0}
+  ballGameWon: 0
+  gamesWon: 0
 --- !u!1001 &1871350752
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5374,6 +5470,10 @@ PrefabInstance:
     - target: {fileID: 6346631205455246628, guid: d0188616055a06a4882607e1329e8052, type: 3}
       propertyPath: m_Name
       value: Portal_Frame
+      objectReference: {fileID: 0}
+    - target: {fileID: 6346631205455246628, guid: d0188616055a06a4882607e1329e8052, type: 3}
+      propertyPath: m_TagString
+      value: Portal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0188616055a06a4882607e1329e8052, type: 3}

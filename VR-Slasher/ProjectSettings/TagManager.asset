@@ -10,6 +10,7 @@ TagManager:
   - Can
   - Ball
   - Key
+  - Portal
   layers:
   - Default
   - TransparentFX

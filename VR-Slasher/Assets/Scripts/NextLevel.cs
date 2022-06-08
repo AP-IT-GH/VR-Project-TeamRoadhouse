@@ -23,7 +23,7 @@ public class NextLevel : MonoBehaviour
             currentScore = KeyInventoryManager.instance.Score;
             print(currentScore);
             // if the score is less then 20 show the text not enough, if currScore == 20 make Canvas invisible
-            if (currentScore < 5 )
+            if (currentScore < 5 && GameManager.instance.gamesWon < 1)
             {
                 Portal.SetActive(false);
             }
@@ -37,14 +37,12 @@ public class NextLevel : MonoBehaviour
 
     }
 
-    void OnTriggerEnter(Collider Other)
+    public void Load()
     {
-        if (Other.gameObject)
+        if (LevelToLoad != "")
         {
-
+            SceneManager.LoadScene(LevelToLoad);
         }
     }
 
-    
-   
 }
