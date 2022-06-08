@@ -9,11 +9,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1669679354992228154, guid: b82b2aa6590089b429f1717650d233aa, type: 3}
       propertyPath: m_Name
-      value: muur
+      value: muur Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1669679354992228154, guid: b82b2aa6590089b429f1717650d233aa, type: 3}
+      propertyPath: m_TagString
+      value: Collidable
+      objectReference: {fileID: 0}
+    - target: {fileID: 2366418461959393989, guid: b82b2aa6590089b429f1717650d233aa, type: 3}
+      propertyPath: m_TagString
+      value: Collidable
+      objectReference: {fileID: 0}
+    - target: {fileID: 6648978568177743951, guid: b82b2aa6590089b429f1717650d233aa, type: 3}
+      propertyPath: m_TagString
+      value: Collidable
       objectReference: {fileID: 0}
     - target: {fileID: 7049439923004372292, guid: b82b2aa6590089b429f1717650d233aa, type: 3}
       propertyPath: m_LocalScale.x
       value: 3.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471766090535548216, guid: b82b2aa6590089b429f1717650d233aa, type: 3}
+      propertyPath: m_TagString
+      value: Collidable
       objectReference: {fileID: 0}
     - target: {fileID: 8213803175582661732, guid: b82b2aa6590089b429f1717650d233aa, type: 3}
       propertyPath: m_RootOrder
@@ -58,6 +74,10 @@ PrefabInstance:
     - target: {fileID: 8213803175582661732, guid: b82b2aa6590089b429f1717650d233aa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8216045273800947637, guid: b82b2aa6590089b429f1717650d233aa, type: 3}
+      propertyPath: m_TagString
+      value: Collidable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b82b2aa6590089b429f1717650d233aa, type: 3}

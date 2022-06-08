@@ -7,13 +7,15 @@ public class VRplayer : MonoBehaviour
     public NextLevel Nextlevel;
     void OnTriggerEnter(Collider other)
     {
+        print(other.gameObject.tag);
         // if player collides with obj and level is not null advance to nextLevel
-        if (other.gameObject.CompareTag("Portal"))
+        if (other.gameObject.CompareTag("Portal") || other.gameObject.CompareTag("Agent"))
         {
-            // check wich level has to be loaded
-
             Nextlevel.Load();
-
+        }
+        if (other.gameObject.CompareTag("Agent"))
+        {
+            Nextlevel.Restart();
         }
     }
 }

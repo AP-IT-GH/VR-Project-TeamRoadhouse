@@ -7,6 +7,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 262419334643505463, guid: a482278bc85211d4f89c8263599cc454, type: 3}
+      propertyPath: m_TagString
+      value: Collidable
+      objectReference: {fileID: 0}
+    - target: {fileID: 321090450170466639, guid: a482278bc85211d4f89c8263599cc454, type: 3}
+      propertyPath: m_TagString
+      value: Collidable
+      objectReference: {fileID: 0}
+    - target: {fileID: 555891755931697914, guid: a482278bc85211d4f89c8263599cc454, type: 3}
+      propertyPath: m_TagString
+      value: Collidable
+      objectReference: {fileID: 0}
+    - target: {fileID: 628960365812876029, guid: a482278bc85211d4f89c8263599cc454, type: 3}
+      propertyPath: m_TagString
+      value: Collidable
+      objectReference: {fileID: 0}
+    - target: {fileID: 749550988301530757, guid: a482278bc85211d4f89c8263599cc454, type: 3}
+      propertyPath: m_TagString
+      value: Collidable
+      objectReference: {fileID: 0}
+    - target: {fileID: 814053887776746133, guid: a482278bc85211d4f89c8263599cc454, type: 3}
+      propertyPath: m_TagString
+      value: Collidable
+      objectReference: {fileID: 0}
+    - target: {fileID: 1491144179484719738, guid: a482278bc85211d4f89c8263599cc454, type: 3}
+      propertyPath: m_TagString
+      value: Collidable
+      objectReference: {fileID: 0}
+    - target: {fileID: 2755009997136549845, guid: a482278bc85211d4f89c8263599cc454, type: 3}
+      propertyPath: m_TagString
+      value: Collidable
+      objectReference: {fileID: 0}
+    - target: {fileID: 2761065611231747339, guid: a482278bc85211d4f89c8263599cc454, type: 3}
+      propertyPath: m_TagString
+      value: Collidable
+      objectReference: {fileID: 0}
     - target: {fileID: 3328081537548053724, guid: a482278bc85211d4f89c8263599cc454, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -63,9 +99,49 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4226877271964113553, guid: a482278bc85211d4f89c8263599cc454, type: 3}
+      propertyPath: m_TagString
+      value: Collidable
+      objectReference: {fileID: 0}
     - target: {fileID: 5415958223603885647, guid: a482278bc85211d4f89c8263599cc454, type: 3}
       propertyPath: m_Name
-      value: container
+      value: container Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5415958223603885647, guid: a482278bc85211d4f89c8263599cc454, type: 3}
+      propertyPath: m_TagString
+      value: Collidable
+      objectReference: {fileID: 0}
+    - target: {fileID: 6750255006224618424, guid: a482278bc85211d4f89c8263599cc454, type: 3}
+      propertyPath: m_TagString
+      value: Collidable
+      objectReference: {fileID: 0}
+    - target: {fileID: 7743226054441760538, guid: a482278bc85211d4f89c8263599cc454, type: 3}
+      propertyPath: m_TagString
+      value: Collidable
+      objectReference: {fileID: 0}
+    - target: {fileID: 7772122768342068418, guid: a482278bc85211d4f89c8263599cc454, type: 3}
+      propertyPath: m_TagString
+      value: Collidable
+      objectReference: {fileID: 0}
+    - target: {fileID: 8226760422565471595, guid: a482278bc85211d4f89c8263599cc454, type: 3}
+      propertyPath: m_TagString
+      value: Collidable
+      objectReference: {fileID: 0}
+    - target: {fileID: 8509035528805693458, guid: a482278bc85211d4f89c8263599cc454, type: 3}
+      propertyPath: m_TagString
+      value: Collidable
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635926101035447502, guid: a482278bc85211d4f89c8263599cc454, type: 3}
+      propertyPath: m_TagString
+      value: Collidable
+      objectReference: {fileID: 0}
+    - target: {fileID: 8871424590797834396, guid: a482278bc85211d4f89c8263599cc454, type: 3}
+      propertyPath: m_TagString
+      value: Collidable
+      objectReference: {fileID: 0}
+    - target: {fileID: 9122908658949256266, guid: a482278bc85211d4f89c8263599cc454, type: 3}
+      propertyPath: m_TagString
+      value: Collidable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a482278bc85211d4f89c8263599cc454, type: 3}
