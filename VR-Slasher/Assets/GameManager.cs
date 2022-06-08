@@ -6,11 +6,12 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
     public int amountOfCans = 9;
     public Text gamesWonText;
 
     private bool ballGameWon;
-    private int gamesWon;
+    public int gamesWon;
     private int currentScore;
 
     void Start()

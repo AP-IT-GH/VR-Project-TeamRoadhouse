@@ -1,0 +1,11 @@
+Model Information:
+* title:	Simple metal key
+* source:	https://sketchfab.com/3d-models/simple-metal-key-094cd4d0012e467f9e64425c723401da
+* author:	Groosic (https://sketchfab.com/Groosic)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Simple metal key" (https://sketchfab.com/3d-models/simple-metal-key-094cd4d0012e467f9e64425c723401da) by Groosic (https://sketchfab.com/Groosic) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
