@@ -26,7 +26,6 @@ Voor het movement voegen we een Locomotion System toe aan de XR Rig
 <br><br>
 ![image](https://user-images.githubusercontent.com/61287853/172693640-f6a9d1b1-87ba-4122-ab41-0bc50a4f96e7.png)
 <br><br>
-
 Voeg een nieuwe Snap Turn Provider component (Action-based) toe aan het Locomotion System en zet de Left hand Snap Turn Action uit, zo kan je enkel je hoofd draaien met de rechter controller. De linker controller gaan we gebruiken om te bewegen. 
 <br><br>
 
