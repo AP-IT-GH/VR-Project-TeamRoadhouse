@@ -12,6 +12,8 @@ public class Environment : MonoBehaviour
 
     public void ResetEnvironment()
     {
+        print("Resetting environment");
+
         // Remove all players still in the field
         foreach(var player in players)
         {
@@ -34,7 +36,7 @@ public class Environment : MonoBehaviour
             players.Add(player);
             do
             {
-                player.transform.localPosition = RandomPosition(player.transform.localPosition.y);
+                player.transform.position = RandomPosition(this.transform.position.y + 0.5f);
             } while (Physics.CheckSphere(player.transform.localPosition, .1f));
         }
     }
