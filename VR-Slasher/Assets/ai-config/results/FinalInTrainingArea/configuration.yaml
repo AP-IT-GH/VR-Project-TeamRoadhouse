@@ -3,8 +3,8 @@ behaviors:
   SeekerAgent:
     trainer_type: ppo
     hyperparameters:
-      batch_size: 32
-      buffer_size: 256
+      batch_size: 256
+      buffer_size: 1000000
       learning_rate: 0.0003
       beta: 0.0005
       epsilon: 0.2
@@ -35,7 +35,7 @@ behaviors:
           deterministic: false
       curiosity:
         gamma: 0.99
-        strength: 0.4
+        strength: 0.3
         network_settings:
           normalize: false
           hidden_units: 256
@@ -44,11 +44,11 @@ behaviors:
           memory: null
           goal_conditioning_type: hyper
           deterministic: false
-        learning_rate: 0.01
+        learning_rate: 0.001
         encoding_size: 256
       gail:
         gamma: 0.99
-        strength: 0.5
+        strength: 0.7
         network_settings:
           normalize: false
           hidden_units: 128
@@ -61,7 +61,7 @@ behaviors:
         encoding_size: null
         use_actions: false
         use_vail: false
-        demo_path: D:\Unity projects\VR-Experience\VR-Slasher\ImitationModels\SeekerAgentImati_8.demo
+        demo_path: D:\Unity projects\VR-Experience\VR-Slasher\ImitationModels\FinalDemo.demo
     init_path: null
     keep_checkpoints: 5
     checkpoint_interval: 500000
@@ -70,15 +70,9 @@ behaviors:
     summary_freq: 2000
     threaded: false
     self_play: null
-    behavioral_cloning:
-      demo_path: D:\Unity projects\VR-Experience\VR-Slasher\ImitationModels\SeekerAgentImati_8.demo
-      steps: 0
-      strength: 0.5
-      samples_per_update: 0
-      num_epoch: null
-      batch_size: null
+    behavioral_cloning: null
 env_settings:
-  env_path: null
+  env_path: ../../ai-build
   env_args: null
   base_port: 5005
   num_envs: 1
@@ -94,7 +88,7 @@ engine_settings:
   time_scale: 20
   target_frame_rate: -1
   capture_frame_rate: 60
-  no_graphics: false
+  no_graphics: true
 environment_parameters: null
 checkpoint_settings:
   run_id: FinalInTrainingArea
