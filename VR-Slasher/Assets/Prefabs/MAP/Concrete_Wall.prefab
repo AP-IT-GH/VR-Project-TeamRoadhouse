@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Concrete_Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 2348790155403530200, guid: 38a4c0f37c6c5ab4fb09aae67ea2dba7, type: 3}
+      propertyPath: m_TagString
+      value: Collidable
+      objectReference: {fileID: 0}
     - target: {fileID: 3251284636547854588, guid: 38a4c0f37c6c5ab4fb09aae67ea2dba7, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -66,6 +70,18 @@ PrefabInstance:
     - target: {fileID: 3251284636547854588, guid: 38a4c0f37c6c5ab4fb09aae67ea2dba7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112586316665327146, guid: 38a4c0f37c6c5ab4fb09aae67ea2dba7, type: 3}
+      propertyPath: m_TagString
+      value: Collidable
+      objectReference: {fileID: 0}
+    - target: {fileID: 4205013251316858322, guid: 38a4c0f37c6c5ab4fb09aae67ea2dba7, type: 3}
+      propertyPath: m_TagString
+      value: Collidable
+      objectReference: {fileID: 0}
+    - target: {fileID: 5027022004324592463, guid: 38a4c0f37c6c5ab4fb09aae67ea2dba7, type: 3}
+      propertyPath: m_TagString
+      value: Collidable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38a4c0f37c6c5ab4fb09aae67ea2dba7, type: 3}

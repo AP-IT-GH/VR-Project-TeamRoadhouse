@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.03138483, g: 0.03533012, b: 0.05277327, a: 1}
+  m_IndirectSpecularColor: {r: 0.031384688, g: 0.035329927, b: 0.052773014, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -658,7 +658,7 @@ GameObject:
   - component: {fileID: 132046747}
   m_Layer: 0
   m_Name: Border (2)
-  m_TagString: Untagged
+  m_TagString: Collidable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -854,7 +854,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amountOfCans: 9
-  gamesWonText: {fileID: 0}
   winCanvas: {fileID: 0}
   ballGameWon: 0
   gamesWon: 0
@@ -1277,7 +1276,7 @@ GameObject:
   - component: {fileID: 298210738}
   m_Layer: 0
   m_Name: Border (1)
-  m_TagString: Untagged
+  m_TagString: Collidable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1406,7 +1405,7 @@ GameObject:
   - component: {fileID: 319970364}
   m_Layer: 0
   m_Name: ferrisCollider (3)
-  m_TagString: Untagged
+  m_TagString: Collidable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1765,6 +1764,67 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1001 &430756382
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8705091856704934390, guid: 507e98ecd5d7f444080fff57c9628144, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 249263788}
+    - target: {fileID: 8705091856704934398, guid: 507e98ecd5d7f444080fff57c9628144, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8705091856704934398, guid: 507e98ecd5d7f444080fff57c9628144, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8705091856704934398, guid: 507e98ecd5d7f444080fff57c9628144, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -11.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 8705091856704934398, guid: 507e98ecd5d7f444080fff57c9628144, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8705091856704934398, guid: 507e98ecd5d7f444080fff57c9628144, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8705091856704934398, guid: 507e98ecd5d7f444080fff57c9628144, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8705091856704934398, guid: 507e98ecd5d7f444080fff57c9628144, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8705091856704934398, guid: 507e98ecd5d7f444080fff57c9628144, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8705091856704934398, guid: 507e98ecd5d7f444080fff57c9628144, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8705091856704934398, guid: 507e98ecd5d7f444080fff57c9628144, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8705091856704934398, guid: 507e98ecd5d7f444080fff57c9628144, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8705091856704934399, guid: 507e98ecd5d7f444080fff57c9628144, type: 3}
+      propertyPath: m_Name
+      value: SeekerAgent
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 507e98ecd5d7f444080fff57c9628144, type: 3}
 --- !u!1 &431500386
 GameObject:
   m_ObjectHideFlags: 0
@@ -2041,7 +2101,7 @@ GameObject:
   - component: {fileID: 497576826}
   m_Layer: 0
   m_Name: ferrisCollider (1)
-  m_TagString: Untagged
+  m_TagString: Collidable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2133,6 +2193,10 @@ PrefabInstance:
     - target: {fileID: 449236080066947192, guid: 6a3958ef4d339e147897f72ae299116f, type: 3}
       propertyPath: m_Name
       value: Graffiti_Wall_Mendlak_Brno
+      objectReference: {fileID: 0}
+    - target: {fileID: 449236080066947192, guid: 6a3958ef4d339e147897f72ae299116f, type: 3}
+      propertyPath: m_TagString
+      value: Collidable
       objectReference: {fileID: 0}
     - target: {fileID: 2545605539772577175, guid: 6a3958ef4d339e147897f72ae299116f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3035,7 +3099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2328c873738cb474eb8f5770b7606d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelToLoad: Menu
+  LevelToLoad: map_final
   Portal: {fileID: 1286467663}
 --- !u!65 &741029976
 BoxCollider:
@@ -3282,7 +3346,7 @@ GameObject:
   - component: {fileID: 812566601}
   m_Layer: 0
   m_Name: ferrisCollider (2)
-  m_TagString: Untagged
+  m_TagString: Collidable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3391,8 +3455,8 @@ Transform:
   m_LocalPosition: {x: 4.94, y: -19.039488, z: -20.740662}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 338712666}
   - {fileID: 888304230}
+  - {fileID: 338712666}
   - {fileID: 1671523877}
   - {fileID: 249263788}
   m_Father: {fileID: 0}
@@ -3892,7 +3956,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 854368570}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &900677617
 GameObject:
@@ -3908,7 +3972,7 @@ GameObject:
   - component: {fileID: 900677619}
   m_Layer: 0
   m_Name: Border
-  m_TagString: Untagged
+  m_TagString: Collidable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4003,7 +4067,7 @@ GameObject:
   - component: {fileID: 932707694}
   m_Layer: 0
   m_Name: ferrisCollider
-  m_TagString: Untagged
+  m_TagString: Collidable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4548,6 +4612,10 @@ PrefabInstance:
     - target: {fileID: 449236080066947192, guid: 6a3958ef4d339e147897f72ae299116f, type: 3}
       propertyPath: m_Name
       value: Graffiti_Wall_Mendlak_Brno (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 449236080066947192, guid: 6a3958ef4d339e147897f72ae299116f, type: 3}
+      propertyPath: m_TagString
+      value: Collidable
       objectReference: {fileID: 0}
     - target: {fileID: 2545605539772577175, guid: 6a3958ef4d339e147897f72ae299116f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5339,7 +5407,7 @@ GameObject:
   - component: {fileID: 1224398754}
   m_Layer: 0
   m_Name: FrontTable
-  m_TagString: Untagged
+  m_TagString: Collidable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5420,107 +5488,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1224398752}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1238718085 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5833059393233128866, guid: 7b29c0db2a3b7d0459f3565e02a231c0, type: 3}
-  m_PrefabInstance: {fileID: 2078852228}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &1238718086
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1238718085}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: eca0395b5171f114fa31c58b8bb3f55a, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 20
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &1247483909
 GameObject:
   m_ObjectHideFlags: 0
@@ -5863,6 +5830,10 @@ PrefabInstance:
     - target: {fileID: 449236080066947192, guid: 6a3958ef4d339e147897f72ae299116f, type: 3}
       propertyPath: m_Name
       value: Graffiti_Wall_Mendlak_Brno (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 449236080066947192, guid: 6a3958ef4d339e147897f72ae299116f, type: 3}
+      propertyPath: m_TagString
+      value: Collidable
       objectReference: {fileID: 0}
     - target: {fileID: 2545605539772577175, guid: 6a3958ef4d339e147897f72ae299116f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6872,7 +6843,7 @@ GameObject:
   - component: {fileID: 1563353224}
   m_Layer: 0
   m_Name: ferrisCollider (5)
-  m_TagString: Untagged
+  m_TagString: Collidable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7782,6 +7753,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Graffiti_Wall_Mendlak_Brno (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 449236080066947192, guid: 6a3958ef4d339e147897f72ae299116f, type: 3}
+      propertyPath: m_TagString
+      value: Collidable
+      objectReference: {fileID: 0}
     - target: {fileID: 2545605539772577175, guid: 6a3958ef4d339e147897f72ae299116f, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0
@@ -8044,7 +8019,7 @@ GameObject:
   - component: {fileID: 1929237712}
   m_Layer: 0
   m_Name: ferrisCollider (6)
-  m_TagString: Untagged
+  m_TagString: Collidable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8747,75 +8722,6 @@ Transform:
   m_Father: {fileID: 1419602795}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &2078852228
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5833059393233128866, guid: 7b29c0db2a3b7d0459f3565e02a231c0, type: 3}
-      propertyPath: m_Name
-      value: Ghost
-      objectReference: {fileID: 0}
-    - target: {fileID: 9155167735140847193, guid: 7b29c0db2a3b7d0459f3565e02a231c0, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9155167735140847193, guid: 7b29c0db2a3b7d0459f3565e02a231c0, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.01521299
-      objectReference: {fileID: 0}
-    - target: {fileID: 9155167735140847193, guid: 7b29c0db2a3b7d0459f3565e02a231c0, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.01521299
-      objectReference: {fileID: 0}
-    - target: {fileID: 9155167735140847193, guid: 7b29c0db2a3b7d0459f3565e02a231c0, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.01521299
-      objectReference: {fileID: 0}
-    - target: {fileID: 9155167735140847193, guid: 7b29c0db2a3b7d0459f3565e02a231c0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.412
-      objectReference: {fileID: 0}
-    - target: {fileID: 9155167735140847193, guid: 7b29c0db2a3b7d0459f3565e02a231c0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -11.91
-      objectReference: {fileID: 0}
-    - target: {fileID: 9155167735140847193, guid: 7b29c0db2a3b7d0459f3565e02a231c0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.0191
-      objectReference: {fileID: 0}
-    - target: {fileID: 9155167735140847193, guid: 7b29c0db2a3b7d0459f3565e02a231c0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9155167735140847193, guid: 7b29c0db2a3b7d0459f3565e02a231c0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9155167735140847193, guid: 7b29c0db2a3b7d0459f3565e02a231c0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9155167735140847193, guid: 7b29c0db2a3b7d0459f3565e02a231c0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9155167735140847193, guid: 7b29c0db2a3b7d0459f3565e02a231c0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9155167735140847193, guid: 7b29c0db2a3b7d0459f3565e02a231c0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9155167735140847193, guid: 7b29c0db2a3b7d0459f3565e02a231c0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7b29c0db2a3b7d0459f3565e02a231c0, type: 3}
 --- !u!1 &2134621966
 GameObject:
   m_ObjectHideFlags: 0
@@ -8830,7 +8736,7 @@ GameObject:
   - component: {fileID: 2134621968}
   m_Layer: 0
   m_Name: ferrisCollider (4)
-  m_TagString: Untagged
+  m_TagString: Collidable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9054,6 +8960,10 @@ PrefabInstance:
     - target: {fileID: 2851458266259409728, guid: c93ce14f4045c9040a6e4913d590b539, type: 3}
       propertyPath: m_Name
       value: Monster_Circus
+      objectReference: {fileID: 0}
+    - target: {fileID: 2851458266259409728, guid: c93ce14f4045c9040a6e4913d590b539, type: 3}
+      propertyPath: m_TagString
+      value: Collidable
       objectReference: {fileID: 0}
     - target: {fileID: 4955725199761914168, guid: c93ce14f4045c9040a6e4913d590b539, type: 3}
       propertyPath: m_LocalScale.x
